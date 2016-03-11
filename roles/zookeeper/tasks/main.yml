@@ -21,4 +21,4 @@
            creates=/var/lib/zookeeper/version-2/
 
 - name: start zookeeper
-  service: name=zookeeper-server state=started enabled=yes
+  service: name=zookeeper-server state=restarted enabled=yes
