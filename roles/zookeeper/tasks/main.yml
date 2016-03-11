@@ -15,6 +15,7 @@
   template: src=etc/zookeeper/conf/zoo.cfg.j2
             dest=/etc/zookeeper/conf/zoo.cfg
             mode=0444 owner=root group=root
+  notify: bounce zookeeper
 
 - name: initialize zookeeper
   command: service zookeeper-server init
