@@ -1,0 +1,6 @@
+---
+
+- name: setup cloudera repo
+  copy: src=etc/yum.repos.d/cloudera.repo
+        dest=/etc/yum.repos.d/cloudera.repo
+        mode=0444 owner=root group=root
