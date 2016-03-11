@@ -1,0 +1,6 @@
+---
+
+- hosts: zookeepers
+  sudo: yes
+  roles:
+    - zookeeper
