@@ -5,8 +5,11 @@
         dest=/etc/yum.repos.d/cloudera.repo
         mode=0444 owner=root group=root
 
-- name: install zookeeper
-  yum: name=zookeeper-server state=present
+- name: install zookeeper and jdk8
+  yum: name={{ item }} state=present
+  with_items: 
+    - java-1.8.0-openjdk-headless
+    - zookeeper-server
 
 - name: initialize zookeeper
   command: service zookeeper-server init
