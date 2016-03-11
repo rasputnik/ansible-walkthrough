@@ -5,3 +5,4 @@ zk1
 # connection details
 ansible_ssh_user=vagrant
 ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+zk_client_port=21810
