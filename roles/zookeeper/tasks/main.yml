@@ -8,5 +8,8 @@
 - name: install zookeeper
   yum: name=zookeeper-server state=present
 
+- name: initialize zookeeper
+  command: service zookeeper-server init
+
 - name: start zookeeper
   service: name=zookeeper-server state=started enabled=yes
